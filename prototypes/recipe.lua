@@ -11,7 +11,7 @@ data:extend({
     category = "moon-garden-repair",
     ingredients = {
       {type="item", name="ancient-structure-repair-part", amount=1},
-      {type="item", name="electronic-circuit", amount=1},
+      {type="item", name="processing-unit", amount=1},
     },
     results = {},
     allow_quality = false,
@@ -31,8 +31,8 @@ data:extend({
     hide_from_player_crafting = true,
     category = "fulgoran-lunaponics",
     ingredients = {
-      {type="item", name="ancient-structure-repair-part", amount=20},
-      {type="item", name="electronic-circuit", amount=20},
+      {type="item", name="ancient-structure-repair-part", amount=10},
+      {type="item", name="processing-unit", amount=10},
     },
     results = {},
     allow_quality = true,

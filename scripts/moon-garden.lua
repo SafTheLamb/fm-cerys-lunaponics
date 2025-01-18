@@ -7,7 +7,7 @@ Public.GARDEN_WRECK_STAGE_ENUM = {
 
 Public.FIRST_GARDEN_REPAIR_RECIPES_NEEDED = 50
 Public.SECOND_GARDEN_REPAIR_RECIPES_NEEDED = 150
-Public.DEFAULT_GARDEN_REPAIR_RECIPES_NEEDED = 200
+Public.DEFAULT_GARDEN_REPAIR_RECIPES_NEEDED = 250
 
 function Public.tick_15_check_broken_moon_gardens(surface)
 	if not storage.lunaponics.broken_moon_gardens then
@@ -210,34 +210,72 @@ function Public.tick_20_check_garden_quality_upgrades(surface)
 	})
 
 	for _, garden in pairs(gardens) do
-		if garden.valid and garden.is_crafting() then
-			local recipe, recipe_quality = garden.get_recipe()
-			if recipe and recipe.name == "cerys-upgrade-fulgoran-moon-garden-quality" then
-				local garden_quality = garden.quality
+    storage.lunaponics.garden_upgrade_monitor[garden.unit_number] = nil
+    
+		-- if garden.valid and garden.is_crafting() then
+		-- 	local recipe, recipe_quality = garden.get_recipe()
+		-- 	if recipe and recipe.name == "cerys-upgrade-fulgoran-moon-garden-quality" then
+		-- 		local garden_quality = garden.quality
 
-				if garden_quality.next and garden_quality.next.name == recipe_quality.name then
-					storage.lunaponics.garden_upgrade_monitor[garden.unit_number] = {
+		-- 		if garden_quality.next and garden_quality.next.name == recipe_quality.name then
+		-- 			storage.lunaponics.garden_upgrade_monitor[garden.unit_number] = {
+		-- 				entity = garden,
+		-- 				quality_upgrading_to = recipe_quality.name,
+		-- 			}
+		-- 		else
+		-- 			garden.set_recipe(nil)
+		-- 			for _, ingredient in
+		-- 				pairs(prototypes.recipe["cerys-upgrade-fulgoran-moon-garden-quality"].ingredients)
+		-- 			do
+		-- 				for _ = 1, ingredient.amount do
+		-- 					surface.spill_item_stack({
+		-- 						position = garden.position,
+		-- 						stack = {
+		-- 							name = ingredient.name,
+		-- 							count = 1,
+		-- 							quality = recipe_quality.name,
+		-- 						},
+		-- 					})
+		-- 				end
+		-- 			end
+		-- 			garden.set_recipe(recipe, recipe_quality)
+		-- 			storage.lunaponics.garden_upgrade_monitor[garden.unit_number] = nil
+		-- 		end
+		-- 	end
+		-- end
+    if garden and garden.valid and garden.quality and garden.quality.next then
+			local recipe, recipe_quality = garden.get_recipe()
+
+			if recipe and recipe.name == "cerys-upgrade-fulgoran-moon-garden-quality" then
+				if garden.quality.next.name == recipe_quality.name and garden.is_crafting() then
+					storage.cerys.garden_upgrade_monitor[garden.unit_number] = {
 						entity = garden,
 						quality_upgrading_to = recipe_quality.name,
 					}
 				else
-					garden.set_recipe(nil)
-					for _, ingredient in
-						pairs(prototypes.recipe["cerys-upgrade-fulgoran-moon-garden-quality"].ingredients)
-					do
-						for _ = 1, ingredient.amount do
+					local inv = garden.get_inventory(defines.inventory.assembling_machine_input)
+
+					if inv and inv.valid then
+						local contents = inv.get_contents()
+						for _, ingredient in pairs(contents) do
+							inv.remove({
+								name = ingredient.name,
+								count = ingredient.count,
+								quality = ingredient.quality,
+							})
+
 							surface.spill_item_stack({
 								position = garden.position,
 								stack = {
 									name = ingredient.name,
-									count = 1,
-									quality = recipe_quality.name,
+									count = ingredient.count,
+									quality = ingredient.quality,
 								},
 							})
 						end
 					end
-					garden.set_recipe(recipe, recipe_quality)
-					storage.lunaponics.garden_upgrade_monitor[garden.unit_number] = nil
+
+					garden.set_recipe(recipe, garden.quality.next)
 				end
 			end
 		end

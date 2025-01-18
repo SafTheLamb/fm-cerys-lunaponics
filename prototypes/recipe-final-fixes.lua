@@ -1,9 +1,18 @@
-data.raw.recipe["liquid-fertilizer"].category = "chemistry-or-cryogenics-or-fulgoran-cryogenics"
-data.raw.recipe["bioslurry-recycling"].category = "chemistry-or-cryogenics-or-fulgoran-cryogenics"
+local function update_recipe_category(recipe_name)
+  if data.raw.recipe[recipe_name] then
+    local new_category = data.raw.recipe[recipe_name].category.."-or-fulgoran-cryogenics"
+    if data.raw["recipe-category"][new_category] then
+      data.raw.recipe[recipe_name].category = new_category
+    end
+  end
+end
+
+update_recipe_category("liquid-fertilizer")
+update_recipe_category("bioslurry-recycling")
 if settings.startup["astroponics-crude-oil"].value then
-  data.raw.recipe["bioslurry-putrefaction"].category = "chemistry-or-cryogenics-or-fulgoran-cryogenics"
+  update_recipe_category("bioslurry-putrefaction")
 end
 
 if mods["bztin"] then
-  data.raw.recipe["organotins"].category = "chemistry-or-fulgoran-cryogenics"
+  update_recipe_category("organotins")
 end

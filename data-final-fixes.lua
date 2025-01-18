@@ -1,5 +1,10 @@
-data.raw.recipe["liquid-fertilizer"].category = "chemistry-or-cryogenics-or-fulgoran-cryogenics"
-data.raw.recipe["bioslurry-recycling"].category = "chemistry-or-cryogenics-or-fulgoran-cryogenics"
-if settings.startup["astroponics-crude-oil"].value then
-  data.raw.recipe["bioslurry-putrefaction"].category = "chemistry-or-cryogenics-or-fulgoran-cryogenics"
+require("prototypes.recipe-final-fixes")
+
+-- doing this here because Cerys has to do things here as well for mod compat reasons
+local ftech = require("__fdsl__.lib.technology")
+
+ftech.add_unlock("cerys-cryogenic-plant-quality-upgrades", "cerys-upgrade-fulgoran-moon-garden-quality")
+
+if mods["bztin"] then
+  ftech.add_unlock("cerys-nitrogen-rich-mineral-processing", "alternative-nitrogen-rich-mineral-processing")
 end

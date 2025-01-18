@@ -1,4 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.2.0
+  Changes:
+    - Update thumbnail to match Cerys' new planet graphics
+    - Change repairing and upgrading Moon Gardens to cost processing units, which are abundant to start from mining ruins
+    - Fix technology unlocks
+  Bugfixes:
+    - Update logic for moon garden upgrade to match cryo plant upgrade logic
+
+---------------------------------------------------------------------------------------------------
 Version: 0.1.1
   Bugfixes:
     - Fix bad migration code.
