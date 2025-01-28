@@ -1,4 +1,5 @@
 local frep = require("__fdsl__.lib.recipe")
+local ftech = require("__fdsl__.lib.technology")
 
 if mods["bztin"] and data.raw.item["tinned-cable"] then
   frep.replace_result("cerys-nuclear-scrap-recycling", "copper-cable", "tinned-cable")
@@ -13,3 +14,9 @@ table.insert(data.raw["simple-entity"]["cerys-ruin-colossal"].minable.results, {
 
 local cerys = data.raw.planet["cerys"]
 cerys.map_gen_settings.autoplace_settings["entity"].settings["cerys-fulgoran-moon-garden"] = {}
+
+ftech.add_unlock("cerys-cryogenic-plant-quality-upgrades", "cerys-upgrade-fulgoran-moon-garden-quality")
+
+if mods["bztin"] then
+  ftech.add_unlock("cerys-nitrogen-rich-mineral-processing", "alternative-nitrogen-rich-mineral-processing")
+end

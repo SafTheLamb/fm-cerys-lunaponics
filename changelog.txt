@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.2.1
+  Changes:
+    - Moved technology changes out of data-final-fixes, shouldn't affect anything
+  Bugfixes:
+    - Fix migrations code not checking if Tin is enabled
+
+---------------------------------------------------------------------------------------------------
 Version: 0.2.0
   Changes:
     - Update thumbnail to match Cerys' new planet graphics
