@@ -1,4 +1,14 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.3.1
+  Bugfixes:
+    - Fixed support for Cerys 1.3.0
+
+---------------------------------------------------------------------------------------------------
+Version: 0.3.0
+  Changes:
+    - Updated graphics for alternative nitrogen-rich mineral processing
+
+---------------------------------------------------------------------------------------------------
 Version: 0.2.1
   Changes:
     - Moved technology changes out of data-final-fixes, shouldn't affect anything

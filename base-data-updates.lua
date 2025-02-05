@@ -15,7 +15,7 @@ table.insert(data.raw["simple-entity"]["cerys-ruin-colossal"].minable.results, {
 local cerys = data.raw.planet["cerys"]
 cerys.map_gen_settings.autoplace_settings["entity"].settings["cerys-fulgoran-moon-garden"] = {}
 
-ftech.add_unlock("cerys-cryogenic-plant-quality-upgrades", "cerys-upgrade-fulgoran-moon-garden-quality")
+ftech.add_unlock("cerys-fulgoran-machine-quality-upgrades", "cerys-upgrade-fulgoran-moon-garden-quality")
 
 if mods["bztin"] then
   ftech.add_unlock("cerys-nitrogen-rich-mineral-processing", "alternative-nitrogen-rich-mineral-processing")

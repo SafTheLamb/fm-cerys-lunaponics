@@ -47,11 +47,7 @@ if mods["bztin"] then
       type = "recipe",
       name = "alternative-nitrogen-rich-mineral-processing",
       always_show_made_in = true,
-      icons = {
-        {icon="__Cerys-Moon-of-Fulgora__/graphics/icons/nitrogen-rich-minerals.png", scale=0.4, shift={0, -9}, draw_background=true},
-        {icon="__bztin__/graphics/icons/tin-ore.png", scale=0.4, shift={-12, 9}, draw_background=true},
-        {icon="__space-age__/graphics/icons/fluid/fluorine.png", scale=0.4, shift={12, 9}, draw_background=true},
-      },
+      icon = "__wood-universe-assets__/graphics/icons/alternative-nitrogen-rich-mineral-processing.png",
       category = "fulgoran-cryogenics",
       energy_required = 2,
       enabled = false,
