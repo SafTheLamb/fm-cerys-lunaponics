@@ -3,12 +3,12 @@
   "title": "Wooden Cerys: Lunaponics",
   "description": "Grow wood on Cerys in basically space!",
   "author": "SafTheLamb",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "factorio_version": "2.0",
   "homepage": "https://github.com/SafTheLamb/fm-cerys-lunaponics",
   "dependencies": [
     "astroponics >= 1.2.1",
-    "Cerys-Moon-of-Fulgora",
+    "Cerys-Moon-of-Fulgora >= 1.4.17",
     "wood-universe-assets >= 1.3.0",
     "? bztin"
   ]

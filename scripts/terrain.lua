@@ -12,7 +12,7 @@ end
 --== Entity positions ==--
 
 local tower_separation = 22
-local max_radius = common.MOON_RADIUS * 1.2
+local max_radius = common.CERYS_RADIUS * 1.2
 
 local hex_width = tower_separation
 local hex_height = tower_separation * math.sqrt(3)
