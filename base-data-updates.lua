@@ -25,11 +25,12 @@ table.insert(data.raw["simple-entity"]["cerys-ruin-big"].minable.results, {type=
 table.insert(data.raw["simple-entity"]["cerys-ruin-huge"].minable.results, {type="item", name="tree-seed", amount=1})
 table.insert(data.raw["simple-entity"]["cerys-ruin-colossal"].minable.results, {type="item", name="tree-seed", amount=2})
 
-table.insert(data.raw["simple-entity"]["cerys-ruin-small"].minable.results, {type="item", name="lumber", amount=3})
-table.insert(data.raw["simple-entity"]["cerys-ruin-medium"].minable.results, {type="item", name="lumber", amount=7})
-table.insert(data.raw["simple-entity"]["cerys-ruin-big"].minable.results, {type="item", name="lumber", amount_min=10, amount_max=14})
-table.insert(data.raw["simple-entity"]["cerys-ruin-huge"].minable.results, {type="item", name="lumber", amount_min=18, amount_max=25})
-table.insert(data.raw["simple-entity"]["cerys-ruin-colossal"].minable.results, {type="item", name="lumber", amount_min=32, amount_max=39})
+local lumber_item = mods["wood-logistics"] and settings.startup["wood-logistics-lumber"].value and "lumber" or "wood"
+table.insert(data.raw["simple-entity"]["cerys-ruin-small"].minable.results, {type="item", name=lumber_item, amount=3})
+table.insert(data.raw["simple-entity"]["cerys-ruin-medium"].minable.results, {type="item", name=lumber_item, amount=7})
+table.insert(data.raw["simple-entity"]["cerys-ruin-big"].minable.results, {type="item", name=lumber_item, amount_min=10, amount_max=14})
+table.insert(data.raw["simple-entity"]["cerys-ruin-huge"].minable.results, {type="item", name=lumber_item, amount_min=18, amount_max=25})
+table.insert(data.raw["simple-entity"]["cerys-ruin-colossal"].minable.results, {type="item", name=lumber_item, amount_min=32, amount_max=39})
 
 table.insert(data.raw["simple-entity"]["cerys-ruin-small"].minable.results, {type="item", name="low-density-structure", amount=1, probability=0.12})
 table.insert(data.raw["simple-entity"]["cerys-ruin-medium"].minable.results, {type="item", name="low-density-structure", amount=1, probability=0.12})

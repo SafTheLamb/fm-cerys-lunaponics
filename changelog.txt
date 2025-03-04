@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.4.1
+  Bugfixes:
+    - Fix load error when lumber does not exist
+
+---------------------------------------------------------------------------------------------------
 Version: 0.4.0
   Major Features:
     - Make ammoniacal fertilizer unique to Cerys, changing its recipe to use ammonia, methane and nitrogen-rich minerals
