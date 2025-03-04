@@ -1,4 +1,14 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.4.0
+  Major Features:
+    - Make ammoniacal fertilizer unique to Cerys, changing its recipe to use ammonia, methane and nitrogen-rich minerals
+  Changes:
+    - Add lumber and LDS to yields from mining ruins for early-moon progression
+    - Reduce tree seeds yielded from ruins
+    - Move icons back into Cerys Lunaponics for simpler iteration (larger assets are still contained within Wooden Universe Assets)
+    - Lubricant is modified to use bioslurry instead of light oil
+
+---------------------------------------------------------------------------------------------------
 Version: 0.3.2
   Bugfixes:
     - Fixed support for Cerys 1.4.17

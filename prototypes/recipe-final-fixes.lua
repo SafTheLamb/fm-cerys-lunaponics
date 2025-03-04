@@ -7,8 +7,7 @@ local function update_recipe_category(recipe_name)
   end
 end
 
-update_recipe_category("liquid-fertilizer")
-update_recipe_category("bioslurry-recycling")
+update_recipe_category("liquid-fertilizer-ammoniacal")
 if settings.startup["astroponics-crude-oil"].value then
   update_recipe_category("bioslurry-putrefaction")
 end

@@ -38,6 +38,30 @@ data:extend({
     allow_quality = true,
     allow_productivity = false,
     hide_from_signal_gui = true,
+  },
+  {
+    type = "recipe",
+    name = "cerys-liquid-fertilizer",
+    icon = "__cerys-lunaponics__/graphics/icons/fluid/cerys-liquid-fertilizer.png",
+    category = "chemistry-or-cryogenics-or-fulgoran-cryogenics",
+    subgroup = "cerys-processes",
+    order = "d-b",
+    surface_conditions = {
+      {property="magnetic-field", min=120, max=120},
+      {property="pressure", min=5, max=5},
+    },
+    energy_required = 2,
+    enabled = false,
+    auto_recycle = false,
+    allow_productivity = true,
+    ingredients = {
+      {type="item", name="cerys-nitrogen-rich-minerals", amount=1},
+      {type="fluid", name="ammonia", amount=10},
+      {type="fluid", name="methane", amount=30}
+    },
+    results = {
+      {type="fluid", name="liquid-fertilizer", amount=40}
+    }
   }
 })
 
@@ -47,7 +71,7 @@ if mods["bztin"] then
       type = "recipe",
       name = "alternative-nitrogen-rich-mineral-processing",
       always_show_made_in = true,
-      icon = "__wood-universe-assets__/graphics/icons/alternative-nitrogen-rich-mineral-processing.png",
+      icon = "__cerys-lunaponics__/graphics/icons/alternative-nitrogen-rich-mineral-processing.png",
       category = "fulgoran-cryogenics",
       energy_required = 2,
       enabled = false,
