@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.4.3
+  Bugfixes:
+    - Fix load error due to internal name of Cerys' lubricant synthesis being changed in 2.4.3
+    - Skipping 0.4.2 in memory of lubricant-synthesis, Cerys Version 0.7.0 - 2.4.2
+
+---------------------------------------------------------------------------------------------------
 Version: 0.4.1
   Bugfixes:
     - Fix load error when lumber does not exist

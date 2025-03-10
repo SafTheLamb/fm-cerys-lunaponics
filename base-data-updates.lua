@@ -1,8 +1,8 @@
 local frep = require("__fdsl__.lib.recipe")
 local ftech = require("__fdsl__.lib.technology")
 
-data.raw.recipe["lubricant-synthesis"].icon = "__cerys-lunaponics__/graphics/icons/fluid/lubricant-synthesis.png"
-frep.replace_ingredient("lubricant-synthesis", "light-oil", "bioslurry")
+data.raw.recipe["cerys-lubricant-synthesis"].icon = "__cerys-lunaponics__/graphics/icons/fluid/lubricant-synthesis.png"
+frep.replace_ingredient("cerys-lubricant-synthesis", "light-oil", "bioslurry")
 
 if mods["bztin"] and data.raw.item["tinned-cable"] then
   frep.replace_result("cerys-nuclear-scrap-recycling", "copper-cable", "tinned-cable")
