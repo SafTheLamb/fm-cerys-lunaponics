@@ -7,7 +7,7 @@
   "factorio_version": "2.0",
   "homepage": "https://github.com/SafTheLamb/fm-cerys-lunaponics",
   "dependencies": [
-    "astroponics >= 1.4.0",
+    "astroponics >= 1.6.0",
     "Cerys-Moon-of-Fulgora >= 2.4.3",
     "? bztin"
   ]
