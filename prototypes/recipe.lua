@@ -24,9 +24,7 @@ data:extend({
     subgroup = "cerys-garden-repair",
     enabled = false,
     order = "g",
-    icons = {
-      {icon="__Krastorio2Assets__/icons/entities/greenhouse.png", tint={153,204,255}}
-    },
+    icon = "__cerys-lunaponics__/graphics/icons/moon-garden.png",
     energy_required = 30,
     hide_from_player_crafting = true,
     category = "fulgoran-lunaponics",

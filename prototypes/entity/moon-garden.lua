@@ -2,9 +2,7 @@ local merge = require("__Cerys-Moon-of-Fulgora__.lib").merge
 
 local moon_garden = merge(data.raw["assembling-machine"]["space-garden"], {
   name = "cerys-fulgoran-moon-garden",
-  icons = {
-    {icon="__Krastorio2Assets__/icons/entities/greenhouse.png", tint={153,204,255}}
-  },
+  icon = "__cerys-lunaponics__/graphics/icons/moon-garden.png",
   subgroup = "cerys-entities",
   order = "g",
   max_health = 25000,
@@ -20,7 +18,8 @@ local moon_garden = merge(data.raw["assembling-machine"]["space-garden"], {
   },
   map_color = {17, 204, 102},
 })
-moon_garden.graphics_set.animation.layers[1].tint = {153, 204, 255}
+moon_garden.graphics_set.animation.layers[1].filename = "__cerys-lunaponics__/graphics/entity/moon-garden/moon-garden.png"
+moon_garden.graphics_set.working_visualisations[1].animation.filename = "__cerys-lunaponics__/graphics/entity/moon-garden/moon-garden-working.png"
 moon_garden.surface_conditions = nil
 
 local wreck = merge(moon_garden, {
