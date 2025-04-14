@@ -6,6 +6,9 @@
   "version": "0.5.2",
   "factorio_version": "2.0",
   "homepage": "https://github.com/SafTheLamb/fm-cerys-lunaponics",
+  "package": {
+    "ignore": ["thumbnail.afphoto", "**/*.afphoto", "**/*.ase", "**/*.afphoto~lock~", "**/*.pdn"]
+  },
   "dependencies": [
     "astroponics >= 1.6.0",
     "Cerys-Moon-of-Fulgora >= 2.4.3",
