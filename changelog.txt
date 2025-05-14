@@ -2,6 +2,8 @@
 Version: 0.5.3
 Date: ????
   Changes:
+    - Fix crash with Cerys using the new additional_categories feature
+    - Required version is now 2.0.49 (currently experimental)
 ---------------------------------------------------------------------------------------------------
 Version: 0.5.2
 Date: 2025-04-14

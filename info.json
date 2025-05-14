@@ -10,6 +10,7 @@
     "ignore": ["thumbnail.afphoto", "**/*.afphoto", "**/*.ase", "**/*.afphoto~lock~", "**/*.pdn"]
   },
   "dependencies": [
+    "base >= 2.0.49",
     "astroponics >= 1.6.0",
     "Cerys-Moon-of-Fulgora >= 2.4.3",
     "? bztin"

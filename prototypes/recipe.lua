@@ -41,7 +41,8 @@ data:extend({
     type = "recipe",
     name = "cerys-liquid-fertilizer",
     icon = "__cerys-lunaponics__/graphics/icons/fluid/cerys-liquid-fertilizer.png",
-    category = "chemistry-or-cryogenics-or-fulgoran-cryogenics",
+    category = "chemistry-or-cryogenics",
+    additional_categories = {"fulgoran-cryogenics"},
     subgroup = "cerys-processes",
     order = "d-b",
     surface_conditions = {
