@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.6.0
-Date: ????
+Date: 2025-06-15
   Major Features:
     - Add Cerys-specific crude tree lunaponics, for early production of wood
     - Add Cerys-specific tree seed synthesis, to prevent softlocking
