@@ -14,13 +14,13 @@ script.on_init(function()
   local surface = game.get_surface("cerys")
 	if surface then
 		Public.initialize_lunaponics()
-    local gardens = surface.find_entities_filtered{name={"cerys-fulgoran-moon-garden", "cerys-fulgoran-moon-garden-wreck", "cerys-fulgoran-moon-garden-wreck-frozen"}}
+    local gardens = surface.find_entities_filtered{name={"cerys-fulgoran-moon-garden", "cerys-fulgoran-moon-garden-frozen"}}
     if not gardens or #gardens == 0 then
       for chunk in surface.get_chunks() do
         terrain.on_cerys_chunk_generated(chunk, surface)
       end
     end
-    gardens = surface.find_entities_filtered{name={"cerys-fulgoran-moon-garden", "cerys-fulgoran-moon-garden-wreck", "cerys-fulgoran-moon-garden-wreck-frozen"}}
+    gardens = surface.find_entities_filtered{name="cerys-fulgoran-moon-garden", "cerys-fulgoran-moon-garden-frozen"}
     plants = surface.find_entities_filtered{name={"cerys-fulgoran-cryogenic-plant", "cerys-fulgoran-cryogenic-plant-wreck", "cerys-fulgoran-cryogenic-plant-wreck-frozen"}}
     if (not gardens or #gardens == 0) and (plants and #plants > 0) then
       game.print("ERROR: Cerys is already generated and Lunaponics was unable to generate any Moon gardens. You can place some (default is ~5) manually with the editor, though they will be minable by default, and you won't be able to upgrade their quality like intended.")
@@ -61,7 +61,7 @@ function Public.ensure_lunaponics_storage_and_tables()
     }
   end
 
-  if not storage.lunaponics.broken_moon_gardens then
-    storage.lunaponics.broken_moon_gardens = {}
+  if not storage.lunaponics.frozen_moon_gardens then
+    storage.lunaponics.frozen_moon_gardens = {}
   end
 end

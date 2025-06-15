@@ -98,13 +98,13 @@ function Public.create_moon_gardens(surface, area)
 				entity.destroy()
 			end
 
-			local p3 = surface.find_non_colliding_position("cerys-fulgoran-moon-garden-wreck-frozen", p2, 5, 1)
+			local p3 = surface.find_non_colliding_position("cerys-fulgoran-moon-garden-frozen", p2, 5, 1)
 
 			if p3 then
 				Public.ensure_solid_foundation(surface, p3, 3, 3)
 
 				local e = surface.create_entity({
-					name = "cerys-fulgoran-moon-garden-wreck-frozen",
+					name = "cerys-fulgoran-moon-garden-frozen",
 					position = p3,
 					force = "player",
 				})
@@ -112,7 +112,7 @@ function Public.create_moon_gardens(surface, area)
 				if e and e.valid then
 					e.minable_flag = false
 					e.destructible = false
-					moon_garden.register_ancient_moon_garden(e, true)
+					moon_garden.register_ancient_moon_garden(e)
 				end
 			end
 		end

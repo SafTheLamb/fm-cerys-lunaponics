@@ -1,7 +1,12 @@
 ---------------------------------------------------------------------------------------------------
-Version: 0.5.4
+Version: 0.6.0
 Date: ????
+  Major Features:
+    - Add Cerys-specific crude tree lunaponics, for early production of wood
+    - Add Cerys-specific tree seed synthesis, to prevent softlocking
   Changes:
+    - Moon gardens no longer require repairing
+    - Buffed moon garden crafting speed to 2 from 1 (+100%)
     - Update required version of FDSL
   Locale:
     - Add RU locale (credit: onseshigo)

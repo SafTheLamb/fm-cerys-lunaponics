@@ -17,25 +17,24 @@ script.on_event({
 end)
 
 script.on_event(defines.events.on_tick, function(event)
-  local tick = event.tick
+	local tick = event.tick
 
-  local surface = game.get_surface("cerys")
-	if not (surface and surface.valid) then
-		return
+	local surface = game.get_surface("cerys")
+		if not (surface and surface.valid) then
+			return
+		end
+
+	if storage.lunaponics then
+		Public.lunaponics_tick(surface, tick)
 	end
-
-  if storage.lunaponics then
-    Public.lunaponics_tick(surface, tick)
-  end
 end)
 
 function Public.lunaponics_tick(surface, tick)
-  moon_garden.tick_1_check_garden_quality_upgrades(surface)
+  	moon_garden.tick_1_check_garden_quality_upgrades(surface)
 
-  if tick % 20 == 0 then
+  	if tick % 20 == 0 then
+		moon_garden.tick_15_check_frozen_moon_gardens(surface)
 		moon_garden.tick_20_check_garden_quality_upgrades(surface)
-		-- Ideally, match the tick interval of the repair recipes:
-		moon_garden.tick_15_check_broken_moon_gardens(surface)
 	end
 end
 

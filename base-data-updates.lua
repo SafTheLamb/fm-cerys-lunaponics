@@ -11,6 +11,8 @@ end
 
 ftech.add_unlock("cerys-fulgoran-machine-quality-upgrades", "cerys-upgrade-fulgoran-moon-garden-quality")
 ftech.add_unlock("cerys-fulgoran-cryogenics", "cerys-liquid-fertilizer")
+ftech.add_unlock("cerys-nitrogen-rich-mineral-processing", "cerys-crude-lunaponics")
+ftech.add_unlock("cerys-nitrogen-rich-mineral-processing", "cerys-tree-seed-synthesis")
 
 if mods["bztin"] then
   ftech.add_unlock("cerys-nitrogen-rich-mineral-processing", "alternative-nitrogen-rich-mineral-processing")
