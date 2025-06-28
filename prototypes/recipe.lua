@@ -121,7 +121,7 @@ if mods["bztin"] then
       auto_recycle = false,
       ingredients = {
         {type="item", name="cerys-nitrogen-rich-minerals", amount=1},
-        {type="fluid", name="nitric-acid", amount=40},
+        {type="fluid", name="cerys-nitric-acid", amount=40},
         {type="fluid", name="water", amount=40},
       },
       results = {
