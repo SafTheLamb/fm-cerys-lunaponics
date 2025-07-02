@@ -2,6 +2,7 @@
 Version: 0.6.1
 Date: ????
   Changes:
+    - Fix crash related to changed internal name
 ---------------------------------------------------------------------------------------------------
 Version: 0.6.0
 Date: 2025-06-15
